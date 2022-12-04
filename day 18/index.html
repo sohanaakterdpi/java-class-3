@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- if condition -->
+
+    <p id="demo">if condition</p>
+
+    <!-- if else conditon -->
+    <div id="ifelse">if else condition</div>
+
+    <!-- if else if condition -->
+    <div id="ifelseif">if else if condition</div>
+
+    <!-- switch statment -->
+    <div id="switch">switch statment</div>
+    <script>
+        //if condition
+        var d = new Date();
+        if(d.getDate()>=3){
+            document.getElementById("demo").innerHTML = "result published before" + (d.getDate() -3) + "days";
+        }
+        // if else condition
+        if(d.getHours()>12) {
+            document.getElementById("ifelse").innerHTML = "Good Noon";
+        } else {
+            document.getElementById("ifelse").innerHTML = "Good Morning";
+        }
+        // if else if condition
+        var di = new Date();
+        var h = di.getHours();
+        if(h < 12){
+            document.getElementById("ifelseif").innerHTML = "Good Morning";
+        }else if( h >= 12 && h < 15)
+        {
+            document.getElementById("ifelseif").innerHTML = "Good Noon";
+        }else if(h = 15 && h > 18){
+            document.getElementById("ifelseif").innerHTML = "Good afternoon";
+        }else{
+            document.getElementById("ifelseif").innerHTML = "Good evening";
+        }
+        //switch statment
+        var d2 = new Date();
+        var day;
+        switch(d2.getDay()){
+            case 0:
+                day = "Sunday";
+            break;
+            case 1:
+                day = "Monday";
+            break;
+            case 2:
+                day = "Tuesday";
+            break;
+            case 3:
+                day = "Wednesday";
+            break;
+            case 4:
+                day = "Thursday";
+            break;
+            case 5:
+                day = "Friday";
+            break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("switch").innerHTML = day;
+    </script>
+</body>
+</html>
